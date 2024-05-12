@@ -1,0 +1,21 @@
+.container{
+    background-image: url('../assets/search-image.jpg');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+
+    
+
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        
+
+        .logo {
+            margin: 60px;
+        }
+    }
+} 
+
