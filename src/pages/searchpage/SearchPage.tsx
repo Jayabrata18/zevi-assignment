@@ -1,7 +1,7 @@
 import logo from "../../assets/Screenshot_2024-05-12_113833-removebg-preview.png";
 import SearchBar from "../../components/seachbar/SearchBar";
 import "./searchpage.scss";
-import React, {  useState } from "react";
+import  {  useState } from "react";
 import SearchPopUp from "../../components/searchpopup/SearchPopUp";
 
 const SearchPage = () => {

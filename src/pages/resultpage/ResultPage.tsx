@@ -1,4 +1,3 @@
-import React from "react";
 import "./resultpage.scss";
 import FilterComponent from "../../components/filter/FilterComponent";
 import CardSection from "../../components/cardsection/CardSection";

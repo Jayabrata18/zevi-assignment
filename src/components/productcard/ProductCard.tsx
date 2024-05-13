@@ -1,9 +1,9 @@
 
 const ProductCard = ({
-  product,
+  // product,
   onClick,
 }: {
-  product: any;
+  // product: any;
   onClick?: () => void;
 }) => {
   return (
