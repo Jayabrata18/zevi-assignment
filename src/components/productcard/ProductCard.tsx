@@ -1,9 +1,11 @@
-
+interface Product {
+  name: string; 
+}
 const ProductCard = ({
-  // product,
+  product,
   onClick,
 }: {
-  // product: any;
+  product: Product;
   onClick?: () => void;
 }) => {
   return (
@@ -13,6 +15,7 @@ const ProductCard = ({
       </div>
       <div className="product-details">
         <span>red dress</span>
+        <span>{product.name}</span>
       </div>
     </div>
   );
