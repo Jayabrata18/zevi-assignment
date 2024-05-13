@@ -1,4 +1,3 @@
-import React from "react";
 import "./filtercomponent.scss";
 const FilterComponent = () => {
   return (

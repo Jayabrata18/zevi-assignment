@@ -1,4 +1,3 @@
-import React from "react";
 import "./cardsection.scss";
 import ProductCard2 from "../productcard2/ProductCard2";
 

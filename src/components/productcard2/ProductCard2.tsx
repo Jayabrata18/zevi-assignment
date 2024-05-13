@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import "./productcard2.scss";
 const ProductCard2 = () => {
