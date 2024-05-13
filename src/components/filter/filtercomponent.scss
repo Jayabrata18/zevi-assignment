@@ -1,10 +1,10 @@
-label{
+label {
     font-size: 0.9rem;
     font-family: poppins;
     padding-left: 5px;
 }
 
-h3{
+h3 {
     font-family: poppins;
     font-size: 17px;
 }
@@ -14,14 +14,27 @@ input {
     width: 15px;
 }
 
-.brand-item{
+.brand-item {
     display: flex;
     align-items: center;
+    margin-top: 8px;
 
 }
 
-.filter-container{
+.filter-container {
     margin: 15px;
     width: fit-content;
     min-width: 200px;
+}
+
+.divider {
+    width: 100%;
+    text-align: center;
+    border-bottom: .7px solid rgb(236, 230, 230);
+    line-height: .1rem;
+    margin: 10px 0;
+}
+
+.price-range {
+    margin-top: 1px;
 }

@@ -30,7 +30,15 @@ const ProductCard2 = () => {
           <span className="current-price">Rs. 499</span>
         </div>
         <div className="rating-container">
-          <span className="rating">4.5</span>
+          <span
+            className="star"
+            style={{
+              color: "gold",
+              fontSize: "15px",
+            }}
+          >
+            ★ ★ ★ ★ ★
+          </span>
           <span className="rating-count">(200)</span>
         </div>
       </div>
