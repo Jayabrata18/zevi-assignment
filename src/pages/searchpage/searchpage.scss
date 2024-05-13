@@ -1,5 +1,5 @@
-.container {
-    background-image: url('../assets/search-image.jpg');
+.searchpage-container {
+    background-image: url('../../assets/search-image.jpg');
     height: 100vh;
     width: 100vw;
     background-size: cover;
@@ -18,15 +18,16 @@
         .logo {
             // margin: 40px;
             margin-right: 50px;
-            margin-top: 20px;
-
-
+            margin-top: 35px;
+            height: 55px;
+            width: 75px;
 
         }
 
     }
 
     .search-bar {
+        margin-top: 55px;
         display: flex;
         width: 100%;
         flex-direction: row;

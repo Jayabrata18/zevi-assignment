@@ -1,0 +1,27 @@
+label{
+    font-size: 0.9rem;
+    font-family: poppins;
+    padding-left: 5px;
+}
+
+h3{
+    font-family: poppins;
+    font-size: 17px;
+}
+
+input {
+    height: 15px;
+    width: 15px;
+}
+
+.brand-item{
+    display: flex;
+    align-items: center;
+
+}
+
+.filter-container{
+    margin: 15px;
+    width: fit-content;
+    min-width: 200px;
+}
