@@ -1,11 +1,9 @@
-interface Product {
-  name: string; 
-}
+
 const ProductCard = ({
   product,
   onClick,
 }: {
-  product: Product;
+  product: any;
   onClick?: () => void;
 }) => {
   return (
