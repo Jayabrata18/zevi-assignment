@@ -1,9 +1,11 @@
 .search-result {
     background-color: white;
-    height: 375px;
+    min-height: 400px;
     width: 50%;
     margin-top: 13px;
-    padding: 45px;
+    padding: 25px;
+    // overflow-y: scroll;
+    // height: fit-content;
 
     .category-span {
         font-size: 20px;

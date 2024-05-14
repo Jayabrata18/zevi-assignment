@@ -37,50 +37,8 @@
 
     }
 
-    .search-result {
-        background-color: white;
-        height: 375px;
-        width: 50%;
-        margin-top: 13px;
-        padding: 45px;
+  
 
-        .category-span {
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 20px;
-            padding-top: 50px;
-        }
-
-        .category {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 10px 0px;
-
-        }
-    }
-
-    .suggetions {
-        .popular-suggetions {
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 40px;
-            padding-top: 50px;
-
-        }
-
-        .suggetions-list {
-            margin-top: 20px;
-           
-        }
-         .suggetions-item{
-            margin-top: 10px;
-         }
-
-        // .suggetions-list br {
-        //     padding: 40px;
-        //     display: block;
-        // }
-    }
+    
 
 }

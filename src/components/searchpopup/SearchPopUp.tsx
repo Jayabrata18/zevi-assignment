@@ -60,9 +60,7 @@ const SearchPopUp = () => {
             Jewellery
           </span>
           <br />
-          <span className="suggetions-item" onClick={handleRedirect}>
-            Watches
-          </span>
+          
         </div>
       </div>
     </div>
