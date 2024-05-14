@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import CartBox from "../../components/cartbox/CartBox";
 
 interface Product {
@@ -55,7 +55,7 @@ const Demo = () => {
   return (
     <div>
       <h1>Products</h1>
-      <CartBox products={products} cartItems={cartItems} />
+      {/* <CartBox products={products} cartItems={cartItems} /> */}
     </div>
   );
 };
