@@ -1,45 +1,71 @@
 import { useEffect, useState } from "react";
-import ProductCard from "../productcard/ProductCard";
+import CartBox from "../cartbox/CartBox";
 import "./searchpopup.scss";
 import { useNavigate } from "react-router-dom";
-import { getProducts } from "../../api/productApi";
+
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  rating: {
+    rate: number;
+    count: number;
+  };
+}
+
 const SearchPopUp = () => {
-  const [products, setProducts] = useState({});
-  useEffect(() => {
-    getProducts().then((data) => {
-      setProducts(data[0]);
-    });
-  }, []);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [cartItems, setCartItems] = useState<number[]>([]);
   const navigate = useNavigate();
   const handleRedirect = () => {
     navigate("/result");
   };
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch("https://fakestoreapi.com/products");
+        const data = await response.json();
+        setProducts(data);
+        // Shuffle the products array
+        const shuffledProducts = shuffleArray(data);
+        // Take the first four products
+        const randomProducts = shuffledProducts.slice(0, 4);
+        // Populate cartItems with IDs of random products
+        const productIds = randomProducts.map((product) => product.id);
+        setCartItems(productIds);
+      } catch (error) {
+        console.error("Error fetching product data:", error);
+      }
+    };
 
-  // useEffect(() => {
-  //   getProducts().then((data) => {
-  //     if (Array.isArray(data)) {
-  //       setProducts(data.slice(0, 5)); // Slice the first five products
-  //     } else {
-  //       console.error("Data fetched is not an array:", data);
-  //     }
-  //   });
-  // }, []);
+    fetchProducts();
+  }, []);
+
+  // Function to shuffle an array
+  const shuffleArray = (array: any[]) => {
+    const shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [
+        shuffledArray[j],
+        shuffledArray[i],
+      ];
+    }
+    return shuffledArray;
+  };
+
   return (
-    <div className="search-result">
-      <span className="category-span">Latest Trends</span>
+    <div className="searchpopup-result">
+      <span className="search-category-span">Latest Trends</span>
       <div className="category">
-        <ProductCard product={products} onClick={handleRedirect} />
-        <ProductCard product={products} onClick={handleRedirect} />
-        <ProductCard product={products} onClick={handleRedirect} />
-        <ProductCard product={products} onClick={handleRedirect} />
-        <ProductCard product={products} onClick={handleRedirect} />
-        {/* {Array.isArray(products) ? (
-            products.map((product, index) => (
-              <ProductCard key={index} product={product} />
-            ))
-          ) : (
-            <p>No products available</p>
-          )} */}
+        <CartBox
+          products={products}
+          cartItems={cartItems}
+          onClick={handleRedirect}
+        />
       </div>
       <div className="suggetions">
         <span className="popular-suggetions">Popular suggetions</span>
@@ -60,7 +86,6 @@ const SearchPopUp = () => {
             Jewellery
           </span>
           <br />
-          
         </div>
       </div>
     </div>

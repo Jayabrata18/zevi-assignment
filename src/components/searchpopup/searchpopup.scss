@@ -1,13 +1,13 @@
-.search-result {
+.searchpopup-result {
     background-color: white;
-    min-height: 400px;
-    width: 50%;
-    margin-top: 13px;
+    // min-height: 400px;
+    // width: 50%;
+    // margin-top: 13px;
     padding: 25px;
-    // overflow-y: scroll;
-    // height: fit-content;
+    // // overflow-y: scroll;
+    // // height: fit-content;
 
-    .category-span {
+    .search-category-span {
         font-size: 20px;
         font-weight: bold;
         margin-top: 20px;
@@ -16,6 +16,7 @@
 
     .category {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         margin: 10px 0px;

@@ -20,7 +20,9 @@ const SearchPage = () => {
       <div className="search-bar" onClick={handleSearch}>
         <SearchBar />
       </div>
-      {showSearchResults && <SearchPopUp />}
+      <div className="search-page-popup">
+        {showSearchResults && <SearchPopUp />}
+      </div>
     </div>
   );
 };

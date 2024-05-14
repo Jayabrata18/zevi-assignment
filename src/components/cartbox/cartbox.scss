@@ -1,0 +1,26 @@
+.cart-container{
+   
+    display: flex;
+    flex-direction: row;
+
+.product-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 15px;
+
+        img {
+            width: 130px;
+            height: 150px;
+        }
+
+        ;
+
+        span {
+            font-size: 15px;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+    }
+}
+
