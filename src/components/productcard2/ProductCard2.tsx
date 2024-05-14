@@ -1,8 +1,26 @@
-import  { useState } from "react";
+import React, { useState } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import "./productcard2.scss";
-const ProductCard2 = () => {
+
+interface Props {
+  products: Product[];
+}
+interface Product {
+  id: number;
+  title: string;
+  image: string;
+  rating: {
+    rate: number;
+    count: number;
+  };
+}
+const ProductCard2: React.FC<Props> = ({
+  products,
+}: {
+  products: any;
+}) => {
   const [isLiked, setIsLiked] = useState(false);
+  console.log(products);
 
   const handleLikeToggle = () => {
     setIsLiked(!isLiked);
@@ -17,19 +35,21 @@ const ProductCard2 = () => {
             <FaRegHeart style={{ color: "white" }} />
           )}
         </div>
-        <img src="https://via.placeholder.com/130x170" alt="product" />
+   
+        <img src={products.image} alt={products.title} />
 
         <div className="view-product">
           <span> View Product</span>
         </div>
       </div>
       <div className="detail-container">
-        <span className="product-title">Round Neck</span>
+        <span className="product-title">{products.title}</span>
         <div className="price-container">
           <span className="previous-price">Rs. 599</span>
           <span className="current-price">Rs. 499</span>
         </div>
         <div className="rating-container">
+          <span className="rating">{Math.floor(products.rating.rate)}</span>
           <span
             className="star"
             style={{
@@ -37,9 +57,9 @@ const ProductCard2 = () => {
               fontSize: "15px",
             }}
           >
-            ★ ★ ★ ★ ★
+            {"★".repeat(Math.floor(products.rating.rate))}
           </span>
-          <span className="rating-count">(200)</span>
+          <span className="rating-count">({products.rating.count})</span>
         </div>
       </div>
     </div>
