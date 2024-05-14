@@ -33,7 +33,6 @@ const SearchPopUp = () => {
         const shuffledProducts = shuffleArray(data);
         // Take the first four products
         const randomProducts = shuffledProducts.slice(0, 4);
-        // Populate cartItems with IDs of random products
         const productIds = randomProducts.map((product) => product.id);
         setCartItems(productIds);
       } catch (error) {

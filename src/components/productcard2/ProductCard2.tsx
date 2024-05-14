@@ -49,7 +49,7 @@ const ProductCard2: React.FC<Props> = ({
           <span className="current-price">Rs. 499</span>
         </div>
         <div className="rating-container">
-          <span className="rating">{Math.floor(products.rating.rate)}</span>
+          {/* <span className="rating">{Math.floor(products.rating.rate)}</span> */}
           <span
             className="star"
             style={{
